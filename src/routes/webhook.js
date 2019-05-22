@@ -26,7 +26,9 @@ async function run (props, conf, funcName) {
 export default (conf) => {
   return async (req, res) => {
     let { events = [] } = req.body
-    await run({ events }, conf, 'onEvent')
+    for (let event of events) {
+      await run({ event }, conf, 'onEvent')
+    }
     res.send('ok')
   }
 }
