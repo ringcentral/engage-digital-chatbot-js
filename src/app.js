@@ -1,20 +1,24 @@
 
 import express from 'express'
-import {handler, verify} from './handler'
 import bodyParser from 'body-parser'
+import initWebhook from './routes/webhook'
+import verify from './routes/verify'
+import morgan from 'morgan'
 
 const app = express()
-app.use(bodyParser.json()) // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
+app.use(morgan('tiny'))
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
-app.get(['/', '/test'], (req, res) => {
-  res.end('server running')
-})
-app.get('/favicon.ico', (req, res) => {
-  res.end('')
-})
+app.get('/test', (req, res) => res.send('server running'))
 
-app.get('/dimelo-demo-endpoint', verify)
-app.post('/dimelo-demo-endpoint', handler)
-
-export default app
+export const initApp = (conf) => {
+  app.get('/rc/webhook', verify)
+  app.post('/rc/webhook', initWebhook(conf))
+  for (let skill of conf.skills) {
+    if (skill.appExtend) {
+      skill.appExtend(app)
+    }
+  }
+  return app
+}

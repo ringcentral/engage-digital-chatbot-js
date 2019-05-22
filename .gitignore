@@ -71,6 +71,5 @@ tests/e2e/reports/
 docs/esdoc
 yarn.lock
 
-/dist/.env.yml
-/dist/serverless.yml
+/dist/
 db.sqlite

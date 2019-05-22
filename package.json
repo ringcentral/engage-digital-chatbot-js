@@ -2,6 +2,11 @@
   "name": "ringcentral-engage-chatbot",
   "version": "0.0.1",
   "description": "RingCentral Engage bot framework for js",
+  "main": "dist/index.js",
+  "bin": {
+    "rec": "bin/rcec.js",
+    "ringcentral-engage-chatbot": "bin/rcec.js"
+  },
   "keywords": [
     "ringcentral",
     "bot",
@@ -11,46 +16,45 @@
   ],
   "scripts": {
     "proxy": "ngrok http 3000",
-    "lint": "eslint --max-warnings 0 --ext .js  src",
     "start": "npm run dev",
-    "dev": "node -r @babel/register -r dotenv/config ./src/express"
+    "compile": "babel src --out-dir dist",
+    "p": "cross-env NODE_ENV=production node -r @babel/register bin/rcec.js example-bots/hello.js",
+    "dev": "node -r @babel/register bin/rcec.js example-bots/hello.js",
+    "clean": "node build/clean.js",
+    "build": "npm run clean && npm run compile",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
-    "babel-eslint": "10.0.1",
-    "dotenv": "6.1.0",
-    "eslint": "4.19.1",
-    "eslint-config-airbnb": "16.1.0",
-    "eslint-config-standard": "11.0.0",
-    "eslint-plugin-compat": "2.2.0",
-    "eslint-plugin-import": "2.12.0",
-    "eslint-plugin-node": "6.0.1",
-    "eslint-plugin-promise": "3.8.0",
-    "eslint-plugin-standard": "3.1.0",
-    "js-yaml": "3.12.1",
-    "ngrok": "3.1.0",
-    "recursive-assign": "0.2.0",
-    "serverless": "1.32.0",
-    "shelljs": "0.8.2"
+    "cross-env": "^5.2.0",
+    "ngrok": "^3.1.0",
+    "serverless": "^1.35.1",
+    "shelljs": "^0.8.3",
+    "standard": "^12.0.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.4.4",
     "axios": "^0.18.0",
+    "dotenv": "6.2.0",
+    "morgan": "^1.9.1",
+    "json-deep-copy": "^1.0.2",
+    "commander": "^2.20.0",
     "body-parser": "1.19.0",
+    "serverless-http": "^2.0.1",
     "express": "^4.16.4",
     "lodash": "^4.17.11"
   },
-  "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zxdong262/ringcentral-engage-dimelo-chat-bot-demo.git"
+    "url": "git+https://github.com/zxdong262/ringcentral-engage-chatbot-js.git"
   },
   "author": "Drake Zhao <drake.zhao@ringcentral.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zxdong262/ringcentral-engage-dimelo-chat-bot-demo/issues"
+    "url": "https://github.com/zxdong262/ringcentral-engage-chatbot-js/issues"
   },
-  "homepage": "https://github.com/zxdong262/ringcentral-engage-dimelo-chat-bot-demo#readme"
+  "homepage": "https://github.com/zxdong262/ringcentral-engage-chatbot-js#readme"
 }
