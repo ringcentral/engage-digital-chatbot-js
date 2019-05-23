@@ -3,7 +3,7 @@
  * reply to hello with hi
  */
 
-import _ from 'lodash'
+const _ = require('lodash')
 
 exports.name = 'Hello bot'
 

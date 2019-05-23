@@ -50,6 +50,16 @@ npm start
 - Send a email to your predefined email source address, then bot will auto reply with `This is a auto reply by bot`.
 - Edit `example-bots/hello.js` to set your own reply logic.
 
+## Use it as CLI tool
+
+```bash
+npx ringcentral-engage-chatbot path-to-your-bot.js
+```
+
+## Real example
+
+- [https://github.com/zxdong262/ringcentral-engage-bot-template-js](https://github.com/zxdong262/ringcentral-engage-bot-template-js)
+
 ## todos
 
 - bot examples
