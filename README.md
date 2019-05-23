@@ -1,7 +1,7 @@
 
 # ringcentral-engage-chatbot
 
-[RingCentral Engage(Dimelo)](https://www.dimelo.com/en/dimelo-digital) bot framework for js .
+[RingCentral Engage(Dimelo)](https://www.dimelo.com/en/dimelo-digital) bot framework for js. [api docs](https://github.com/ringcentral/ringcentral-api-specs/tree/master/specs/dimelo-api).
 
 ## Prerequisites
 
@@ -48,13 +48,14 @@ npm start
 ### Test bot
 
 - Send a email to your predefined email source address, then bot will auto reply with `This is a auto reply by bot`.
-- Edit `src/handler.js`'s `reply(event)` function to set your own reply logic.
+- Edit `example-bots/hello.js` to set your own reply logic.
 
 ## todos
 
 - bot examples
 - skill examples
 - tests
+- Deploy to lambda
 
 ## License
 
