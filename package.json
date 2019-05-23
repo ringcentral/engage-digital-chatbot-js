@@ -1,10 +1,10 @@
 {
   "name": "ringcentral-engage-chatbot",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "RingCentral Engage bot framework for js",
   "main": "dist/index.js",
   "bin": {
-    "rec": "bin/rcec.js",
+    "rcec": "bin/rcec.js",
     "ringcentral-engage-chatbot": "bin/rcec.js"
   },
   "keywords": [

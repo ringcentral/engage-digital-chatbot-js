@@ -12,4 +12,5 @@ db.sqlite
 /screenshots/
 .env.sample
 .env
+.sample.env
 /docs
