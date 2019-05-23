@@ -62,9 +62,9 @@ npx ringcentral-engage-chatbot path-to-your-bot.js
 
 ## todos
 
-- bot examples
-- skill examples
-- tests
+- Bot examples
+- Skill examples
+- Tests
 - Deploy to lambda
 
 ## License
