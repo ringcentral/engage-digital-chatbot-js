@@ -54,6 +54,7 @@ npm start
 
 - bot examples
 - skill examples
+- tests
 
 ## License
 
