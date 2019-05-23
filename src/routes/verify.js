@@ -1,5 +1,5 @@
 
-const VERIFY_TOKEN = process.env.DIMELO_CHATBOT_VERIFY_TOKEN
+const VERIFY_TOKEN = process.env.RINGCENTRAL_ENGAGE_VERIFY_TOKEN
 
 // verify dimelo webhook
 export default (req, res) => {

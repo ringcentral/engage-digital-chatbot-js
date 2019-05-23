@@ -10,7 +10,7 @@
 
 ## Quick start
 
-Let's start a simple RingCentral Engage chatbot server that will auto respond to `hello` email with `Hi`.
+Let's start a simple RingCentral Engage chatbot server that will auto respond to any email with `Hi`.
 
 ```bash
 # get the code

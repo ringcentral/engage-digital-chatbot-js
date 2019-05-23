@@ -2,7 +2,7 @@
  * handle webhook
  */
 
-import _ from 'lodash'
+import RingCentralEngage from './t'
 
 async function run (props, conf, funcName) {
   const { skills } = conf
@@ -26,8 +26,15 @@ async function run (props, conf, funcName) {
 export default (conf) => {
   return async (req, res) => {
     let { events = [] } = req.body
+    if (!events) {
+      return res.send('no events')
+    }
+    let client = new RingCentralEngage(
+      process.env.RINGCENTRAL_ENGAGE_API_TOKEN,
+      process.env.RINGCENTRAL_ENGAGE_SERVER_URL
+    )
     for (let event of events) {
-      await run({ event }, conf, 'onEvent')
+      await run({ event, client }, conf, 'onEvent')
     }
     res.send('ok')
   }

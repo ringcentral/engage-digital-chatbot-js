@@ -8,7 +8,8 @@
 
 // handle all events
 export const onEvent = ({
-  event
+  event,
+  client
 }) => {
   console.log(event)
 }

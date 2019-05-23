@@ -4,8 +4,8 @@ const { resolve } = require('path')
 const program = require('commander')
 const { existsSync } = require('fs')
 
-const prodRunBotPath = resolve(__dirname, '../dist/server/run-bot.js')
-const prodRunBotDevPath = resolve(__dirname, '../src/server/run-bot.js')
+const prodRunBotPath = resolve(__dirname, '../dist/run-bot.js')
+const prodRunBotDevPath = resolve(__dirname, '../src/run-bot.js')
 
 const runBot = !existsSync(prodRunBotDevPath) || process.env.NODE_ENV === 'production'
   ? require(prodRunBotPath).default
