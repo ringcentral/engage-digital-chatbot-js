@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-engage-chatbot",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "RingCentral Engage bot framework for js",
   "main": "dist/index.js",
   "bin": {
@@ -18,8 +18,8 @@
     "proxy": "ngrok http 3000",
     "start": "npm run dev",
     "compile": "babel src --out-dir dist",
-    "p": "cross-env NODE_ENV=production node -r @babel/register bin/rcec.js example-bots/hello.js",
-    "dev": "node -r @babel/register bin/rcec.js example-bots/hello.js",
+    "p": "cross-env NODE_ENV=production node -r @babel/register bin/rcec.js example-bots/auto-reply-all.js",
+    "dev": "node -r @babel/register bin/rcec.js example-bots/auto-reply-all.js",
     "clean": "node build/clean.js",
     "build": "npm run clean && npm run compile",
     "prepublishOnly": "npm run build"
