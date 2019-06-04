@@ -20,6 +20,7 @@
     "compile": "babel src --out-dir dist",
     "p": "cross-env NODE_ENV=production node -r @babel/register bin/rcec.js example-bots/auto-reply-all.js",
     "dev": "node -r @babel/register bin/rcec.js example-bots/auto-reply-all.js",
+    "dev1": "node -r @babel/register bin/rcec.js example-bots/auto-reply-all-with-skills.js",
     "clean": "node build/clean.js",
     "build": "npm run clean && npm run compile",
     "prepublishOnly": "npm run build"
@@ -29,6 +30,7 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "@babel/register": "^7.0.0",
+    "cheerio": "^1.0.0-rc.3",
     "cross-env": "^5.2.0",
     "ngrok": "^3.1.0",
     "serverless": "^1.35.1",

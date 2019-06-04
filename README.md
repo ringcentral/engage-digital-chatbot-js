@@ -48,7 +48,12 @@ npm start
 ### Test bot
 
 - Send a email to your predefined email source address, then bot will auto reply with `This is a auto reply by bot`.
-- Edit `example-bots/hello.js` to set your own reply logic.
+- Edit `example-bots/auto-reply-all.js` to set your own reply logic.
+
+### Test bot skill
+
+- Run `npm run dev1` to run bot with skills
+- Check `example-bots/auto-reply-all-with-skills.js` and `example-skills/ping-pong-skill.js`
 
 ## Youtube video
 
