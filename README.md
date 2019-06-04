@@ -50,6 +50,10 @@ npm start
 - Send a email to your predefined email source address, then bot will auto reply with `This is a auto reply by bot`.
 - Edit `example-bots/hello.js` to set your own reply logic.
 
+## Youtube video
+
+[https://youtu.be/jFn7TAogss0](https://youtu.be/jFn7TAogss0)
+
 ## Use it as CLI tool
 
 ```bash
