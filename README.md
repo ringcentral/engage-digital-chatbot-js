@@ -38,7 +38,7 @@ Forwarding                    https://xxxx.ap.ngrok.io -> localhost:6066
 
 ```bash
 # create env file
-cp .sample.env .env
+cp .env.sample .env
 # then edit .env, set proper setting according to the tip in .env
 
 # run local dev server

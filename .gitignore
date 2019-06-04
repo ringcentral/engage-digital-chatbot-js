@@ -40,7 +40,7 @@ package-lock.json
 *.seed
 *.gz
 .project
-/.env
+.env
 
 database.json
 /*.sh
