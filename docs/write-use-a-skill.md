@@ -1,7 +1,10 @@
-/**
- * exmaple ping-pong bot skill file
- * reply to 'ping' with 'pong'
- */
+# Write/use a bot skill
+
+## Write a bot skill
+
+For a simple ping-pong bot skill:
+
+```js
 
 const cheerio = require('cheerio')
 const _ = require('lodash')
@@ -33,3 +36,22 @@ exports.onEvent = async ({
     return true
   }
 }
+
+```
+
+For full config, check [full-config-skill.js](../example-skills/full-config-skill.js)
+
+## Use a bot skill
+
+```js
+// in you bot file
+const skillA = require('skill-a')
+const skillB = require('skill-b')
+exports.skills = [skillA, skillB]
+```
+
+That is it.
+
+## Real example
+
+- todo

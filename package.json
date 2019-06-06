@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-engage-chatbot",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "RingCentral Engage bot framework for js",
   "main": "dist/index.js",
   "bin": {
@@ -15,6 +15,7 @@
     "framework"
   ],
   "scripts": {
+    "ngrok": "npm run proxy",
     "proxy": "ngrok http 3000",
     "start": "npm run dev",
     "compile": "babel src --out-dir dist",

@@ -31,3 +31,4 @@ export const skills = []
 
 export const name = 'No name'
 export const description = 'No desc'
+export const homepage = ''

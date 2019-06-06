@@ -1,5 +1,5 @@
 /**
- * exmaple bot file
+ * exmaple bot file with custom reply function
  * reply to hello with hi
  */
 
