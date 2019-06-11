@@ -18,7 +18,7 @@
     "ngrok": "npm run proxy",
     "proxy": "ngrok http 3000",
     "start": "npm run dev",
-    "compile": "babel src --out-dir dist",
+    "compile": "node_modules/.bin/babel src --out-dir dist",
     "p": "cross-env NODE_ENV=production node -r @babel/register bin/rcec.js example-bots/auto-reply-all.js",
     "dev": "node -r @babel/register bin/rcec.js example-bots/auto-reply-all.js",
     "dev1": "node -r @babel/register bin/rcec.js example-bots/auto-reply-all-with-skills.js",

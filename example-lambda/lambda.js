@@ -3,6 +3,6 @@
  * lambda file
  */
 import serverlessHTTP from 'serverless-http'
-import app from './server'
+import app1 from './server'
 
-exports.app = serverlessHTTP(app)
+export const app = serverlessHTTP(app1)

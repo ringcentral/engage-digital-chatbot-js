@@ -1,6 +1,6 @@
 # Building and Deploying to AWS Lambda
 
-AWS Lambda with API Gateway and RDS would give us a flexible way to deploy the bot.
+AWS Lambda with API Gateway and RDS would give us a flexible way to deploy the bot. Follow these steps to deploy bot app in `example-deploy` to lambda.
 
 Get an AWS account, create `aws_access_key_id` and `aws_secret_access_key` and place them in `~/.aws/credentials`, like this:
 
