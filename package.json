@@ -27,7 +27,7 @@
     "prepublishOnly": "npm run build",
     "build-lambda": "node cmds/build",
     "deploy-lambda": "node cmds/deploy",
-    "deploy": "npm run build-lambda && npm run build-lambda",
+    "deploy": "npm run build-lambda && npm run deploy-lambda",
     "watch": "cd deploy && ../node_modules/.bin/sls logs -f app -t"
   },
   "devDependencies": {
