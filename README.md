@@ -28,7 +28,7 @@ Forwarding                    https://xxxx.ap.ngrok.io -> localhost:6066
 # Remember the https://xxxx.ap.ngrok.io, we will use it later
 ```
 
-Follow [steps to prepare email source and webhook for chatbot](docs/prepare-email-source-and-webhook.md) to prepare the email source and webhook.
+Follow [steps to prepare email source and webhook for chatbot](docs/prepare-email-source-and-webhook.md) to prepare the email source and webhook, if you want to use Dimelo chat, you can check this guide: [step by step guide to enable Dimelo chat](docs/enable-dimelo-chat.md).
 
 ```bash
 # create env file
