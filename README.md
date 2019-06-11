@@ -71,6 +71,10 @@ npx ringcentral-engage-chatbot path-to-your-bot.js
 
 [docs/write-use-a-skill.md](docs/write-use-a-skill.md)
 
+## Build and Deploy to AWS Lambda
+
+[deploy-to-lambda.md](docs/deploy-to-lambda.md)
+
 ## License
 
 MIT

@@ -24,7 +24,11 @@
     "dev1": "node -r @babel/register bin/rcec.js example-bots/auto-reply-all-with-skills.js",
     "clean": "node build/clean.js",
     "build": "npm run clean && npm run compile",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "build-lambda": "node cmds/build",
+    "deploy-lambda": "node cmds/deploy",
+    "deploy": "npm run build-lambda && npm run build-lambda",
+    "watch": "cd deploy && ../node_modules/.bin/sls logs -f app -t"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -48,8 +52,7 @@
     "json-deep-copy": "^1.0.2",
     "lodash": "^4.17.11",
     "morgan": "^1.9.1",
-    "ringcentral-engage-client": "^0.2.0",
-    "serverless-http": "^2.0.1"
+    "ringcentral-engage-client": "^0.2.0"
   },
   "repository": {
     "type": "git",
