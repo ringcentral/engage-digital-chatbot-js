@@ -73,3 +73,7 @@ yarn.lock
 
 /dist/
 db.sqlite
+/deploy/*/**
+/deploy/*
+!/deploy/env.sample.yml
+!/deploy/serverless.sample.yml
