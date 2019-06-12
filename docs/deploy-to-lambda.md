@@ -35,6 +35,8 @@ Deploy to AWS Lambda with `npm run deploy`(requires run this in linux os)
 # Run this cmd to deploy to AWS Lambda, full build, may take more time
 npm run deploy
 
+# When done deploying, do not forget change the webhook url in RingCentral Engage Digital -> admin -> Webhooks to https://xxxxxx.execute-api.us-east-1.amazonaws.com/prod/rc/webhook
+
 ## watch Lambda server log
 npm run watch
 
