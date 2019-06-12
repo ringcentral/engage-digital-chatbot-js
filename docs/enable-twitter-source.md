@@ -7,4 +7,4 @@
 - Go to RingCentral Engage Digital -> admin -> Agents, click the key icon, give your self read/reply/initiate discussion permission, but make sure do not check Approval required.
 - Create a api token in RingCentral Engage Digital -> admin -> API access tokens, select your self as agent.
 - Create webhook in RingCentral Engage Digital -> admin -> Webhooks, Registered events, select `content.imported`.
-- Go to RingCentral Engage Digital -> admin -> Channels, in realtime channel select your Twitter source in source input and save.
+- Go to RingCentral Engage Digital -> admin -> Channels, in realtime or async channel select your Twitter source in source input and save.

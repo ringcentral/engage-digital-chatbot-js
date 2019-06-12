@@ -17,7 +17,6 @@ exports.onEvent = async ({
   }
   console.log(event)
   await client.reply(event, {
-    //title: 'this is a auto reply title',
     body: 'this is a auto reply body'
   })
 }
