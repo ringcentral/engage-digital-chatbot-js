@@ -59,6 +59,10 @@ npm start
 npx ringcentral-engage-chatbot path-to-your-bot.js
 ```
 
+## Use is as a module
+
+Check [docs/direct-use.md](docs/direct-use.md)
+
 ## Real example
 
 - [https://github.com/zxdong262/ringcentral-engage-bot-template-js](https://github.com/zxdong262/ringcentral-engage-bot-template-js): A simple bot written with ringcentral-engage-chatbot.
