@@ -32,22 +32,23 @@ class Client extends RingCentralEngage {
       throw new Error('message object title or body required')
     }
     let url = '/1.0/contents'
-    let title = ''
-    let to = [_.get(event, 'resource.metadata.from')]
+    let toId = _.get(event, 'resource.metadata.from')
+    let to = toId ? [toId] : undefined
     let bcc = _.get(event, 'resource.metadata.bcc')
     let cc = _.get(event, 'resource.metadata.cc')
     let rid = _.get(event, 'resource.id')
     let priv = _.get(event, 'resource.metadata.private')
-    return this.post(url, {
-      title,
+    priv = priv ? true : false
+    let reply = {
       to,
       bcc,
       cc,
       body: '',
-      private: priv ? 1 : undefined,
+      private: priv,
       in_reply_to_id: rid,
       ...messageObj
-    }).catch(e => {
+    }
+    return this.post(url, reply).catch(e => {
       console.log(e)
     })
   }

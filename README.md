@@ -28,7 +28,7 @@ Forwarding                    https://xxxx.ap.ngrok.io -> localhost:6066
 # Remember the https://xxxx.ap.ngrok.io, we will use it later
 ```
 
-Follow [steps to prepare email source and webhook for chatbot](docs/prepare-email-source-and-webhook.md) to prepare the email source and webhook, if you want to use Dimelo chat, you can check this guide: [step by step guide to enable Dimelo chat](docs/enable-dimelo-chat.md).
+Follow [Step by Step guide to enable sources](docs/guides-to-add-sources.md) to prepare the source and webhook. You could choose only one source.
 
 ```bash
 # create env file
@@ -58,6 +58,10 @@ npm start
 ```bash
 npx ringcentral-engage-chatbot path-to-your-bot.js
 ```
+
+## Use is as a module
+
+Check [docs/direct-use.md](docs/direct-use.md)
 
 ## Real example
 
