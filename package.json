@@ -57,12 +57,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zxdong262/ringcentral-engage-chatbot-js.git"
+    "url": "git+https://github.com/ringcentral/ringcentral-engage-chatbot-js.git"
   },
   "author": "Drake Zhao <drake.zhao@ringcentral.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zxdong262/ringcentral-engage-chatbot-js/issues"
+    "url": "https://github.com/ringcentral/ringcentral-engage-chatbot-js/issues"
   },
-  "homepage": "https://github.com/zxdong262/ringcentral-engage-chatbot-js#readme"
+  "homepage": "https://github.com/ringcentral/ringcentral-engage-chatbot-js#readme"
 }

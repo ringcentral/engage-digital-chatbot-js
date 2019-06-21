@@ -14,7 +14,7 @@ Let's start a simple RingCentral Engage chatbot server that will auto respond to
 
 ```bash
 # get the code
-git clone git@github.com:zxdong262/ringcentral-engage-chatbot-js.git
+git clone git@github.com:ringcentral/ringcentral-engage-chatbot-js.git
 cd ringcentral-engage-chatbot-js
 
 # install dependecies
