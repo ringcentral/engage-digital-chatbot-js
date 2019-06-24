@@ -1,5 +1,5 @@
 service:
-  name: ringcentral-engage-chatbot-1
+  name: engage-digital-chatbot-1
 provider:
   stage: ${opt:stage, 'prod'}
   name: aws
@@ -30,7 +30,7 @@ functions:
       Stage: production
       Environment: your-env-tag
       Team: your-team
-      Name: ringcentral-engage-chatbot-1
+      Name: engage-digital-chatbot-1
     events:
       - http:
           method: any

@@ -1,5 +1,5 @@
 
-# ringcentral-engage-chatbot
+# engage-digital-chatbot-js
 
 [RingCentral Engage(Dimelo)](https://www.dimelo.com/en/dimelo-digital) bot framework for js. [api docs](https://github.com/ringcentral/ringcentral-api-specs/tree/master/specs/dimelo-api).
 
@@ -14,8 +14,8 @@ Let's start a simple RingCentral Engage chatbot server that will auto respond to
 
 ```bash
 # get the code
-git clone git@github.com:ringcentral/ringcentral-engage-chatbot-js.git
-cd ringcentral-engage-chatbot-js
+git clone git@github.com:ringcentral/engage-digital-chatbot-js.git
+cd engage-digital-chatbot-js
 
 # install dependecies
 npm i
@@ -65,7 +65,7 @@ Check [docs/direct-use.md](docs/direct-use.md)
 
 ## Real example
 
-- [https://github.com/zxdong262/ringcentral-engage-bot-template-js](https://github.com/zxdong262/ringcentral-engage-bot-template-js): A simple bot written with ringcentral-engage-chatbot.
+- [https://github.com/zxdong262/engage-digital-bot-template-js](https://github.com/zxdong262/ringcentral-engage-bot-template-js): A simple bot written with engage-digital-chatbot.
 
 ## Write a bot
 
