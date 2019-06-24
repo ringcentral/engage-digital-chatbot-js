@@ -51,7 +51,7 @@ npm start
 
 ## Youtube video
 
-[https://youtu.be/jFn7TAogss0](https://youtu.be/jFn7TAogss0)
+[https://youtu.be/HDDGUFIzNxQ](https://youtu.be/HDDGUFIzNxQ)
 
 ## Use it as CLI tool
 
