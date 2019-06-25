@@ -3,7 +3,6 @@
  * reply to hello with hi
  */
 
-const _ = require('lodash')
 const pp = require('../example-skills/ping-pong-skill')
 
 exports.name = 'Hello bot'

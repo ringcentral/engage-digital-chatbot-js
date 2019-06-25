@@ -38,7 +38,7 @@ class Client extends RingCentralEngage {
     let cc = _.get(event, 'resource.metadata.cc')
     let rid = _.get(event, 'resource.id')
     let priv = _.get(event, 'resource.metadata.private')
-    priv = priv ? true : false
+    priv = !!priv
     let reply = {
       to,
       bcc,

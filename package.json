@@ -1,11 +1,13 @@
 {
   "name": "ringcentral-engage-chatbot",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "RingCentral Engage bot framework for js",
   "main": "dist/index.js",
   "bin": {
     "rcec": "bin/rcec.js",
-    "ringcentral-engage-chatbot": "bin/rcec.js"
+    "ringcentral-engage-chatbot": "bin/rcec.js",
+    "ringcentral-engage-chatbot-create": "bin/rcec-create.js",
+    "rcecc": "bin/rcec-create.js"
   },
   "keywords": [
     "ringcentral",
@@ -28,7 +30,8 @@
     "build-lambda": "node cmds/build",
     "deploy-lambda": "node cmds/deploy",
     "deploy": "npm run build-lambda && npm run deploy-lambda",
-    "watch": "cd deploy && ../node_modules/.bin/sls logs -f app -t"
+    "watch": "cd deploy && ../node_modules/.bin/sls logs -f app -t",
+    "lint": "./node_modules/.bin/standard"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -45,7 +48,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.4.4",
-    "axios": "^0.18.0",
+    "axios": "^0.19.0",
     "body-parser": "1.19.0",
     "commander": "^2.20.0",
     "dotenv": "6.2.0",
@@ -53,6 +56,7 @@
     "json-deep-copy": "^1.0.2",
     "lodash": "^4.17.11",
     "morgan": "^1.9.1",
+    "prompts": "^2.1.0",
     "ringcentral-engage-client": "^0.2.0"
   },
   "repository": {
@@ -64,5 +68,11 @@
   "bugs": {
     "url": "https://github.com/ringcentral/engage-digital-chatbot-js/issues"
   },
-  "homepage": "https://github.com/ringcentral/engage-digital-chatbot-js#readme"
+  "homepage": "https://github.com/ringcentral/engage-digital-chatbot-js#readme",
+  "standard": {
+    "ignore": [
+      "/temp/",
+      "/dist/"
+    ]
+  }
 }
