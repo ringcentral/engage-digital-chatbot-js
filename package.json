@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-engage-chatbot",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "description": "RingCentral Engage bot framework for js",
   "main": "dist/index.js",
   "bin": {
@@ -43,7 +43,6 @@
     "js-yaml": "^3.13.1",
     "ngrok": "^3.1.0",
     "serverless": "^1.35.1",
-    "shelljs": "^0.8.3",
     "standard": "^12.0.1"
   },
   "dependencies": {
@@ -52,12 +51,14 @@
     "body-parser": "1.19.0",
     "commander": "^2.20.0",
     "dotenv": "6.2.0",
+    "download": "^7.1.0",
     "express": "^4.16.4",
     "json-deep-copy": "^1.0.2",
     "lodash": "^4.17.11",
     "morgan": "^1.9.1",
     "prompts": "^2.1.0",
-    "ringcentral-engage-client": "^0.2.0"
+    "ringcentral-engage-client": "^0.2.0",
+    "shelljs": "^0.8.3"
   },
   "repository": {
     "type": "git",
