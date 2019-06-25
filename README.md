@@ -86,18 +86,11 @@ We have built-in CLI command to init a empty project from template: [https://git
 ```bash
 npm i -g ringcentral-engage-chatbot
 ringcentral-engage-chatbot-create my-app
-
-# will show:
-✔ Project name, how about: my-great-app … my-app
-✔ Project description … ddd
-✔ Project version … 0.0.1
-✔ Can you confirm? … yes
-{ name: 'my-app', description: 'ddd', version: '0.0.1' }
-building
-fetching https://github.com/ringcentral/engage-digital-bot-template-js/archive/master.zip --> /var/folders/lw/xfgbyvkx19sf8rqwhznhmqv4glnsxg/T
-Done! Now you can run "cd my-app" and follow my-app/README.md's instruction to dev/test/deploy the bot!
-
 ```
+
+Will show:
+
+![ ](screenshots/s1.png)
 
 ## License
 
