@@ -137,5 +137,5 @@ module.exports = async function ask ({ path: targetPath, name, auto }) {
   await fetchZip(zip, from)
   await editFiles(from, res)
   mv(from, targetPath)
-  echo(`Done! Now you can run "cd ${res.name}" and follow ${res.name}/README.md's instruction to dev/test/deploy the bot!`)
+  echo(`Done! Now you can run "cd ${targetPath}" and follow ${targetPath}/README.md's instruction to dev/test/deploy the bot!`)
 }
