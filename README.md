@@ -65,7 +65,7 @@ Check [docs/direct-use.md](docs/direct-use.md)
 
 ## Real example
 
-- [https://github.com/ringcentral/engage-digital-bot-template-js](https://github.com/ringcentral/engage-digital-bot-template-js): A simple bot written with engage-digital-chatbot.
+- [https://github.com/zxdong262/ping-pong-engage-digital-chatbot](https://github.com/zxdong262/ping-pong-engage-digital-chatbot): Example engage digital chat bot that will respond with "pong" for "ping" message.
 
 ## Write a bot
 
