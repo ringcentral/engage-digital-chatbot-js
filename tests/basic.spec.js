@@ -18,12 +18,7 @@ function wait (time) {
 jest.setTimeout(99999)
 
 describe(pack.name, function () {
-  test('server runs', async () => {
-    // let res = await execPromise(pack.scripts.dev)
-    // console.log(res, 'res')
-    // expect(
-    //   res.includes('server running at: http://localhost:3000')
-    // ).toEqual(true)
+  test('server runs and verify api works', async () => {
     await wait(500)
     let c = '1'
     let url1 = `http://localhost:3000/rc/webhook?hub.mode=subscribe&hub.challenge=${c}&hub.verify_token=${RINGCENTRAL_ENGAGE_VERIFY_TOKEN}`
