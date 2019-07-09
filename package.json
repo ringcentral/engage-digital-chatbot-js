@@ -31,7 +31,9 @@
     "deploy-lambda": "node cmds/deploy",
     "deploy": "npm run build-lambda && npm run deploy-lambda",
     "watch": "cd deploy && ../node_modules/.bin/sls logs -f app -t",
-    "lint": "./node_modules/.bin/standard"
+    "lint": "./node_modules/.bin/standard",
+    "jest": "./node_modules/.bin/jest",
+    "test": "./node_modules/.bin/run-s dev jest"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
@@ -43,6 +45,7 @@
     "jest": "^24.8.0",
     "js-yaml": "^3.13.1",
     "ngrok": "^3.1.0",
+    "npm-run-all": "^4.1.5",
     "serverless": "^1.35.1",
     "standard": "^12.0.1"
   },
@@ -75,6 +78,11 @@
     "ignore": [
       "/temp/",
       "/dist/"
+    ]
+  },
+  "jest": {
+    "roots": [
+      "tests"
     ]
   }
 }
