@@ -7,7 +7,7 @@ matrix:
       dist: xenial
 
 script:
-  - npm run dev
+  - npm run dev &
   - npm run jest
 
 branches:
