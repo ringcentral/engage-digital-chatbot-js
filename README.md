@@ -1,5 +1,4 @@
-
-# engage-digital-chatbot-js
+# Engage Digital Chatbot Framework for JavaScript
 
 [![Build Status](https://travis-ci.org/ringcentral/engage-digital-chatbot-js.svg?branch=release)](https://travis-ci.org/ringcentral/engage-digital-chatbot-js)
 
