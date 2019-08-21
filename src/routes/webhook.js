@@ -48,6 +48,15 @@ class Client extends RingCentralEngage {
       in_reply_to_id: rid,
       ...messageObj
     }
+
+    if (event.resource.type === 'twtr/tweet') {
+      return this.get(`/1.0/identities/${event.resource.metadata.author_id}`)
+      .then(({data: { uuid }}) => this.post(`${url}?in_reply_to_id=${rid}&body=@${uuid} ${encodeURIComponent(messageObj.body)}`))
+      .catch(e => {
+        console.log(e)
+      })
+    }
+
     return this.post(url, reply).catch(e => {
       console.log(e)
     })
