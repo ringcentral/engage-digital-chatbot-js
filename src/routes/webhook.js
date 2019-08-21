@@ -25,7 +25,7 @@ async function run (props, conf, funcName) {
 }
 
 class Client extends RingCentralEngage {
-  reply (event, messageObj) {
+  async reply (event, messageObj) {
     if (!messageObj) {
       throw new Error('message object required')
     } else if (!messageObj.title && !messageObj.body) {
@@ -50,11 +50,13 @@ class Client extends RingCentralEngage {
     }
 
     if (event.resource.type === 'twtr/tweet') {
-      return this.get(`/1.0/identities/${event.resource.metadata.author_id}`)
-      .then(({data: { uuid }}) => this.post(`${url}?in_reply_to_id=${rid}&body=@${uuid} ${encodeURIComponent(messageObj.body)}`))
-      .catch(e => {
+      let uid = _.get(event, 'resource.metadata.author_id')
+      let res = await this.get(`/1.0/identities/${uid}`).catch(e => {
         console.log(e)
       })
+      if (res && res.data) {
+        reply.body = `@${res.data.uuid} ${reply.body}`
+      }
     }
 
     return this.post(url, reply).catch(e => {
