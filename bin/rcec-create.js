@@ -6,7 +6,7 @@ const program = require('commander')
 
 program
   .version(require('../package.json').version)
-  .description('Cli tool to create a RingCentral personal chatbot project')
+  .description('Cli tool to create a RingCentral Engage Digital chatbot project')
   .usage('[appName]')
   .option('-A, --no-promots', 'use default options without promots')
   .parse(process.argv)
