@@ -4,7 +4,7 @@
 
 [RingCentral Engage (Dimelo)](https://www.dimelo.com/en/dimelo-digital) bot framework for JavaScript
 
-* [API docs](https://developers.ringcentral.com/engage/digital/guide).
+* [API docs](https://developers.ringcentral.com/engage/digital/guide)
 
 ## Prerequisites
 
