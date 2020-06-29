@@ -5,8 +5,9 @@
 import RingCentralEngage from 'ringcentral-engage-client'
 import _ from 'lodash'
 
+/* istanbul ignore next */
 async function run (props, conf, funcName) {
-  const { skills } = conf
+  const { skills = [] } = conf
   let handled = false
   for (let skill of skills) {
     if (skill[funcName]) {
@@ -24,6 +25,7 @@ async function run (props, conf, funcName) {
   })
 }
 
+/* istanbul ignore next */
 class Client extends RingCentralEngage {
   async reply (event, messageObj) {
     if (!messageObj) {
@@ -68,13 +70,15 @@ class Client extends RingCentralEngage {
 export default (conf) => {
   return async (req, res) => {
     let { events = [] } = req.body
-    if (!events) {
+    if (!events || !events.length) {
       return res.send('no events')
     }
+    /* istanbul ignore next */
     let client = new Client(
       process.env.RINGCENTRAL_ENGAGE_API_TOKEN,
       process.env.RINGCENTRAL_ENGAGE_SERVER_URL
     )
+    /* istanbul ignore next */
     for (let event of events) {
       await run({ event, client }, conf, 'onEvent')
     }

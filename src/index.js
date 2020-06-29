@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { initApp } from './app'
 import * as defaultConfig from './handlers/default'
 

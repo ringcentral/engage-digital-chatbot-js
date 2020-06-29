@@ -1,6 +1,6 @@
 {
   "name": "ringcentral-engage-chatbot",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "RingCentral Engage bot framework for js",
   "main": "dist/index.js",
   "bin": {
@@ -32,24 +32,28 @@
     "deploy": "npm run build-lambda && npm run deploy-lambda",
     "watch": "cd deploy && ../node_modules/.bin/sls logs -f app -t",
     "lint": "./node_modules/.bin/standard",
-    "jest": "./node_modules/.bin/jest",
-    "test": "./node_modules/.bin/run-s dev jest"
+    "jest": "./node_modules/.bin/jest --coverage",
+    "test": "./node_modules/.bin/run-s dev jest",
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.2.3",
-    "@babel/register": "^7.0.0",
+    "@babel/cli": "^7.9.0",
+    "@babel/core": "^7.10.0",
+    "@babel/preset-env": "^7.10.0",
+    "@babel/register": "^7.9.0",
     "cheerio": "^1.0.0-rc.3",
+    "coveralls": "^3.1.0",
     "cross-env": "^5.2.0",
-    "jest": "^24.8.0",
+    "dotenv-override-true": "^6.2.0",
+    "jest": "^26.0.1",
     "js-yaml": "^3.13.1",
     "ngrok": "^3.1.0",
     "serverless": "^1.35.1",
-    "standard": "^12.0.1"
+    "standard": "^14.3.4",
+    "supertest": "^4.0.2"
   },
   "dependencies": {
-    "@babel/runtime": "^7.4.4",
+    "@babel/runtime": "^7.9.0",
     "axios": "^0.19.0",
     "body-parser": "1.19.0",
     "commander": "^2.20.0",
@@ -57,7 +61,7 @@
     "download": "^7.1.0",
     "express": "^4.16.4",
     "json-deep-copy": "^1.0.2",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "morgan": "^1.9.1",
     "prompts": "^2.1.0",
     "ringcentral-engage-client": "^0.2.0",
@@ -80,8 +84,15 @@
     ]
   },
   "jest": {
+    "testEnvironment": "node",
     "roots": [
-      "tests"
+      "./tests"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "setupFiles": [
+      "dotenv-override-true/config"
     ]
   }
 }

@@ -7,10 +7,13 @@ export default (req, res) => {
   let mode = q['hub.mode']
   let c = q['hub.challenge']
   let vt = q['hub.verify_token']
+  /* istanbul ignore next */
   if (mode !== 'subscribe') {
     return res.status(400).send('mode not right')
+    /* istanbul ignore file */
   } else if (!c) {
     return res.status(400).send('challenge not exist')
+    /* istanbul ignore file */
   } else if (vt !== VERIFY_TOKEN) {
     return res.status(400).send('VERIFY_TOKEN not right')
   }

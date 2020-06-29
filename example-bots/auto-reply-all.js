@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 /**
  * exmaple bot file
  * reply to hello with hi

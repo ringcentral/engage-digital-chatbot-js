@@ -7,9 +7,9 @@ matrix:
       dist: xenial
 
 script:
-  - npm run dev &
   - npm run jest
-
+after_success:
+  - npm run coveralls
 branches:
   - release
   - test
