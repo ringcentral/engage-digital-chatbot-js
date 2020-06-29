@@ -69,9 +69,11 @@ class Client extends RingCentralEngage {
 
 export default (conf) => {
   return async (req, res) => {
-    let { events = [] } = req.body
-    if (!events || !events.length) {
-      return res.send('no events')
+    let { events } = req.body
+    /* istanbul ignore next */
+    if (!events) {
+      res.send('no events')
+      return
     }
     /* istanbul ignore next */
     let client = new Client(
@@ -82,6 +84,7 @@ export default (conf) => {
     for (let event of events) {
       await run({ event, client }, conf, 'onEvent')
     }
+    /* istanbul ignore next */
     res.send('ok')
   }
 }
