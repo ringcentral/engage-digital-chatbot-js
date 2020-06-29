@@ -17,3 +17,5 @@ db.sqlite
 /deploy
 /cmds
 /example-lambda
+*.yml
+/coverage/
