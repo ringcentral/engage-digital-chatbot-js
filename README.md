@@ -1,6 +1,6 @@
 # Engage Digital Chatbot Framework for JavaScript
 
-[![Build Status](https://travis-ci.org/ringcentral/engage-digital-chatbot-js.svg?branch=release)](https://travis-ci.org/ringcentral/engage-digital-chatbot-js)
+[![Build Status](https://travis-ci.com/ringcentral/engage-digital-chatbot-js.svg?branch=release)](https://travis-ci.com/ringcentral/engage-digital-chatbot-js)
 [![Coverage Status](https://coveralls.io/repos/github/ringcentral/engage-digital-chatbot-js/badge.svg?branch=release)](https://coveralls.io/github/ringcentral/engage-digital-chatbot-js?branch=release)
 
 [RingCentral Engage (Dimelo)](https://www.dimelo.com/en/dimelo-digital) bot framework for JavaScript
