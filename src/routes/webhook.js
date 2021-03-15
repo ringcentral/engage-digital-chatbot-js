@@ -9,9 +9,9 @@ import _ from 'lodash'
 async function run (props, conf, funcName) {
   const { skills = [] } = conf
   let handled = false
-  for (let skill of skills) {
+  for (const skill of skills) {
     if (skill[funcName]) {
-      let prev = await skill[funcName]({
+      const prev = await skill[funcName]({
         ...props,
         shouldUseSignature: conf.shouldUseSignature,
         handled
@@ -33,15 +33,14 @@ class Client extends RingCentralEngage {
     } else if (!messageObj.title && !messageObj.body) {
       throw new Error('message object title or body required')
     }
-    let url = '/1.0/contents'
-    let toId = _.get(event, 'resource.metadata.from')
-    let to = toId ? [toId] : undefined
-    let bcc = _.get(event, 'resource.metadata.bcc')
-    let cc = _.get(event, 'resource.metadata.cc')
-    let rid = _.get(event, 'resource.id')
-    let priv = _.get(event, 'resource.metadata.private')
-    priv = !!priv
-    let reply = {
+    const url = '/1.0/contents'
+    const toId = _.get(event, 'resource.metadata.from')
+    const to = toId ? [toId] : undefined
+    const bcc = _.get(event, 'resource.metadata.bcc')
+    const cc = _.get(event, 'resource.metadata.cc')
+    const rid = _.get(event, 'resource.id')
+    const priv = !!_.get(event, 'resource.metadata.private')
+    const reply = {
       to,
       bcc,
       cc,
@@ -52,8 +51,8 @@ class Client extends RingCentralEngage {
     }
 
     if (event.resource.type === 'twtr/tweet') {
-      let uid = _.get(event, 'resource.metadata.author_id')
-      let res = await this.get(`/1.0/identities/${uid}`).catch(e => {
+      const uid = _.get(event, 'resource.metadata.author_id')
+      const res = await this.get(`/1.0/identities/${uid}`).catch(e => {
         console.log(e)
       })
       if (res && res.data) {
@@ -69,19 +68,19 @@ class Client extends RingCentralEngage {
 
 export default (conf) => {
   return async (req, res) => {
-    let { events } = req.body
+    const { events } = req.body
     /* istanbul ignore next */
     if (!events) {
       res.send('no events')
       return
     }
     /* istanbul ignore next */
-    let client = new Client(
-      process.env.RINGCENTRAL_ENGAGE_API_TOKEN,
-      process.env.RINGCENTRAL_ENGAGE_SERVER_URL
-    )
+    const client = new Client({
+      apiToken: process.env.RINGCENTRAL_ENGAGE_API_TOKEN,
+      server: process.env.RINGCENTRAL_ENGAGE_SERVER_URL
+    })
     /* istanbul ignore next */
-    for (let event of events) {
+    for (const event of events) {
       await run({ event, client }, conf, 'onEvent')
     }
     /* istanbul ignore next */

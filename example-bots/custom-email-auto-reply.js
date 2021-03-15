@@ -14,13 +14,13 @@ function isEmailEvent (event) {
 }
 
 function reply (event, client) {
-  let url = '/1.0/contents'
-  let title = 'Auto reply: ' + _.get(event, 'resource.metadata.thread_title')
-  let to = [_.get(event, 'resource.metadata.from')]
-  let bcc = _.get(event, 'resource.metadata.bcc')
-  let cc = _.get(event, 'resource.metadata.cc')
-  let body = 'This is a auto reply by bot'
-  let rid = _.get(event, 'resource.id')
+  const url = '/1.0/contents'
+  const title = 'Auto reply: ' + _.get(event, 'resource.metadata.thread_title')
+  const to = [_.get(event, 'resource.metadata.from')]
+  const bcc = _.get(event, 'resource.metadata.bcc')
+  const cc = _.get(event, 'resource.metadata.cc')
+  const body = 'This is a auto reply by bot'
+  const rid = _.get(event, 'resource.id')
   return client.post(url, {
     title,
     to,

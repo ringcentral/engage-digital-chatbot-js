@@ -16,7 +16,7 @@ export const initApp = (conf) => {
   app.get('/rc/webhook', verify)
   app.post('/rc/webhook', initWebhook(conf))
   /* istanbul ignore next */
-  for (let skill of conf.skills || []) {
+  for (const skill of conf.skills || []) {
     if (skill.appExtend) {
       skill.appExtend(app)
     }

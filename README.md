@@ -3,14 +3,14 @@
 [![Build Status](https://travis-ci.com/ringcentral/engage-digital-chatbot-js.svg?branch=release)](https://travis-ci.com/ringcentral/engage-digital-chatbot-js)
 [![Coverage Status](https://coveralls.io/repos/github/ringcentral/engage-digital-chatbot-js/badge.svg?branch=release)](https://coveralls.io/github/ringcentral/engage-digital-chatbot-js?branch=release)
 
-[RingCentral Engage (Dimelo)](https://www.dimelo.com/en/dimelo-digital) bot framework for JavaScript
+[RingCentral Engage (Dimelo)](https://www.ringcentral.com/view_demo_cx.html) bot framework for JavaScript
 
 * [API docs](https://developers.ringcentral.com/engage/digital/guide)
 
 ## Prerequisites
 
 - Nodejs 8.10+/npm, recommend using [nvm](https://github.com/creationix/nvm) to install nodejs/npm.
-- RingCentral Engage(Dimelo) account, [request a demo](http://site.dimelo.com/en/demo#schedule-demo).
+- RingCentral Engage(Dimelo) account, [request a demo](https://www.ringcentral.com/view_demo_cx.html).
 
 ## Quick start
 
@@ -70,6 +70,21 @@ Check [docs/direct-use.md](docs/direct-use.md)
 ## Real example
 
 - [https://github.com/zxdong262/ping-pong-engage-digital-chatbot](https://github.com/zxdong262/ping-pong-engage-digital-chatbot): Example engage digital chat bot that will respond with "pong" for "ping" message.
+
+## Structured Message in Engage Messaging
+
+First, follow [the guide](docs/enable-dimelo-chat.md) to create a Engage Messaging channel
+
+```sh
+# just run
+npm run dev2
+```
+
+Then you can try it in Engage Messaging:
+
+![ ](screenshots/tm.png)
+
+Check [bot code](example-bots/auto-reply-all-with-structure-msg.js) for details.
 
 ## Write a bot
 

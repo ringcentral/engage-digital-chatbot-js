@@ -11,8 +11,8 @@ exports.name = 'ping-pong bot skill'
 exports.description = 'reply to "ping" with "pong"'
 
 function isPing (event) {
-  let $ = cheerio.load(_.get(event, 'resource.metadata.body'))
-  let txt = $('body').text().trim()
+  const $ = cheerio.load(_.get(event, 'resource.metadata.body'))
+  const txt = $('body').text().trim()
   console.log('txt:', txt)
   return txt === 'ping'
 }

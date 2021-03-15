@@ -32,7 +32,6 @@ test/e2e/reports
 /*.yaml
 /pm2
 /package-bak.json
-package-lock.json
 # Runtime data
 #pids
 

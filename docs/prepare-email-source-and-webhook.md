@@ -1,6 +1,6 @@
 # Steps to prepare email source and webhook for chatbot
 
-1. RingCentral Engage (Dimelo) account, [request a demo](http://site.dimelo.com/en/demo#schedule-demo).
+1. RingCentral Engage (Dimelo) account, [request a demo](https://www.ringcentral.com/view_demo_cx.html).
 1. Login to your RingCentral Engage (Dimelo) admin console.
 1. Create a community in RingCentral Engage Digital -> "ADMIN" -> "Communities".
 1. Create email source in RingCentral Engage Digital -> "ADMIN" -> "Sources", make sure it enabled and active. You only need input a email address in "POSTMARK SETTINGS" -> "Email address", leave other default. To see an example, click "Save" without one to see the error message.

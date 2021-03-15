@@ -18,7 +18,7 @@ jest.setTimeout(99999)
 
 describe(pack.name, () => {
   it('verify should work', async () => {
-    let c = '1'
+    const c = '1'
     const res = await request(app)
       .get(`/rc/webhook?hub.mode=subscribe&hub.challenge=${c}&hub.verify_token=${RINGCENTRAL_ENGAGE_VERIFY_TOKEN}`)
     expect(res.statusCode).toEqual(200)
@@ -26,7 +26,7 @@ describe(pack.name, () => {
   })
   it('webhook with empty data', async () => {
     const res = await request(app)
-      .post(`/rc/webhook`)
+      .post('/rc/webhook')
     expect(res.statusCode).toEqual(200)
     expect(res.text).toEqual('no events')
   })

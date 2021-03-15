@@ -1,6 +1,6 @@
 # Step by step guide to enable twitter source
 
-- RingCentral Engage(Dimelo) account, [request a demo](http://site.dimelo.com/en/demo#schedule-demo).
+- RingCentral Engage(Dimelo) account, [request a demo](https://www.ringcentral.com/view_demo_cx.html).
 - Login to your RingCentral Engage(Dimelo) admin console.
 - Create a Twitter community in RingCentral Engage Digital -> admin -> community.
 - Create Twitter source in RingCentral Engage Digital -> admin -> Source, you can get user id, token, secret by click the `Continue with twitter` button.
