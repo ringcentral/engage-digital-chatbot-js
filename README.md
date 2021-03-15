@@ -86,6 +86,8 @@ Then you can try it in Engage Messaging:
 
 Check [bot code](example-bots/auto-reply-all-with-structure-msg.js) for details.
 
+Also we have standalone demo from Embbnux: [https://github.com/ringcentral-tutorials/engage-digital-structured-messages-demo](https://github.com/ringcentral-tutorials/engage-digital-structured-messages-demo)
+
 ## Write a bot
 
 [docs/write-a-bot.md](docs/write-a-bot.md)
